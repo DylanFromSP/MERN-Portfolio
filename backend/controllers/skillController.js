@@ -50,25 +50,25 @@ const deleteSkill = async (req, res) => {
 }
 
 const updateSkill = async (req, res) => {
-    console.log("Update Skill route hit");
-    res.status(200).json({ message: "Update route hit" });
-    // const { id } = req.params
+    // console.log("Update Skill route hit");
+    // res.status(200).json({ message: "Update route hit" });
+    const { id } = req.params
 
-    // if (!mongoose.Types.ObjectId.isValid(id)) {
-    //     return res.status(404).json({ error: "No such skill" })
-    // }
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({ error: "No such skill" })
+    }
 
-    // const skill = await Skill.findOneAndUpdate(
-    //     { _id: id },
-    //     { ...req.body },
-    //     { new: true } // This option returns the updated document
-    // )
+    const skill = await Skill.findOneAndUpdate(
+        { _id: id },
+        { ...req.body },
+        { new: true } // This option returns the updated document
+    )
 
-    // if (!skill) {
-    //     return res.status(404).json({ error: "No such skill" })
-    // }
+    if (!skill) {
+        return res.status(404).json({ error: "No such skill" })
+    }
 
-    // res.status(200).json(skill)
+    res.status(200).json(skill)
 }
 
 module.exports = {
