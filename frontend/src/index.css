@@ -20,12 +20,22 @@ body {
   --error: #e7195a;
 }
 body {
-  background: #f0f0f0;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(#e5e7eb 1px, white 1px);
+  background-size: 16px 16px;
   margin: 0;
   font-family: "Satoshi";
 }
 header {
-  background: #f0f0f0;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(#e5e7eb 1px, white 1px);
+  background-size: 16px 16px;
 }
 header .container {
   max-width: 1400px;
