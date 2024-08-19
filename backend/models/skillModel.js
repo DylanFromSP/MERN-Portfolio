@@ -5,10 +5,9 @@ const Schema = mongoose.Schema
 const skillSchema = new Schema({
     title: {
         type: String,
-        required: true
     },
     image: {
-        type: Number,
+        type: String,
     }
 }, { timestamps: true })
 

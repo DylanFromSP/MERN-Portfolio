@@ -10,7 +10,7 @@ const app = express()
 
 //Middleware
 app.use(cors({
-    methods: ['GET', 'POST', 'DELETE', 'PUT']
+    origin: "*"
 }));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));

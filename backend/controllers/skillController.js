@@ -50,8 +50,6 @@ const deleteSkill = async (req, res) => {
 }
 
 const updateSkill = async (req, res) => {
-    // console.log("Update Skill route hit");
-    // res.status(200).json({ message: "Update route hit" });
     const { id } = req.params
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -61,7 +59,7 @@ const updateSkill = async (req, res) => {
     const skill = await Skill.findOneAndUpdate(
         { _id: id },
         { ...req.body },
-        { new: true } // This option returns the updated document
+        { new: true }
     )
 
     if (!skill) {
@@ -71,10 +69,44 @@ const updateSkill = async (req, res) => {
     res.status(200).json(skill)
 }
 
+const uploadImage = async (req, res) => {
+    const { base64 } = req.body
+    
+    try {
+        const image = await Skill.create({ image: base64 })
+        res.status(200).json(image)
+    } catch (error) {
+        res.status(400).json({ error: error.message})
+    }
+}
+
 module.exports = {
     createSkill,
     getSkills,
     getSkill,
     deleteSkill, 
-    updateSkill
+    updateSkill,
+    uploadImage
 }
+
+// app.post("/uploadImage", async (req, res) => {
+//     const { base64 } = req.body
+    
+//     try {
+//         Skill.create({ image: base64 })
+
+//         res.send({Status: "Ok"})
+//     } catch (error) {
+//         res.send({Status: "Error", data: error})
+//     }
+// })
+
+// app.get("/getImages", async (req, res) => {
+//     try {
+//         await images.find({}).then(data => {
+//             res.send({Status: "Ok", data: data})
+//         })
+//     } catch (error) {
+//         res.send({Status: "Error", data: error})
+//     }
+// })
