@@ -79,8 +79,30 @@ const SkillDetails = () => {
 
   return (
     <div>
-      <div>
-        {/* {skills && skills.map((skill) => (
+      <div className='bg-[#14213D] p-4 md:p-8'>
+        <h1 className='text-white font-bold text-3xl md:text-6xl text-center mb-6'>
+          Skills
+        </h1>
+        <div className='max-w-6xl mx-auto'>
+          <div className='flex flex-wrap gap-3 justify-center'>
+            {allImage?.map(data => (
+              <img
+                key={data._id}
+                className='w-20 h-20 md:w-52 md:h-52 object-cover'
+                src={data.image}
+                alt="Skill"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SkillDetails;
+
+{/* {skills && skills.map((skill) => (
           <p key={skill._id}>{skill.title}</p>
         ))}
         <input
@@ -92,19 +114,3 @@ const SkillDetails = () => {
           <img width={100} height={100} src={`data:image/jpeg;base64,${image}`} alt="Selected" /> 
         }
         <button onClick={uploadImage}>Upload</button> */}
-
-        {allImage?.map(data => (
-          <img 
-            key={data._id}
-            width={100} 
-            height={100} 
-            src={`${data.image}`} 
-            alt="Skill" 
-          /> 
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default SkillDetails;
