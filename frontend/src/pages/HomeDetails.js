@@ -28,7 +28,7 @@ const HomeDetails = () => {
             >
               <Link to="https://github.com/DylanFromSP">
                 <img src={Github_logo} alt="GitHub Logo" className="h-8 md:h-10 mx-auto" />
-                <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#333]"></span>
+                <span className="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:fill-[#333]"></span>
               </Link>
             </button>
             <button
