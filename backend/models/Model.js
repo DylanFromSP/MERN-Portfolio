@@ -16,6 +16,10 @@ const projectSchema = new Schema({
       type: String,
       required: true,
     },
+    cover_image: {
+      type: String,
+      required: true,
+    },
     video_url: {
       type: String,
       required: true,
