@@ -5,8 +5,7 @@ const {
     getSkill,
     deleteSkill,
     updateSkill,
-    uploadImage,
-    deleteAllSkills
+    uploadImage
 } = require("../controllers/skillController")
 
 const router = express.Router()
