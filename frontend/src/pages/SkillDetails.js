@@ -88,7 +88,7 @@ const SkillDetails = () => {
             {allImage?.map(data => (
               <img
                 key={data._id}
-                className='w-20 h-20 md:w-52 md:h-52 object-cover'
+                className='w-20 h-20 md:w-48 md:h-48 object-cover'
                 src={data.image}
                 alt="Skill"
               />
