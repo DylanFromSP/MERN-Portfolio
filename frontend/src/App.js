@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 //Importing Pages and Components
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import InputSkill from "./pages/InputSkill";
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
           <Route
             path = "/"
             element = {<Home />}
+          />
+          <Route
+            path = "/InputSkill"
+            element = {<InputSkill />}
           />
         </Routes>
       </BrowserRouter>

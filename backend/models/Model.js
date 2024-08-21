@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const skillSchema = new Schema({
     title: {
         type: String,
-        required: true,
+        
     },
     image: {
         type: String,
@@ -15,9 +15,9 @@ const skillSchema = new Schema({
 const projectSchema = new Schema({
     title: {
       type: String,
-      required: true,
+      
     },
-    cover_image: {
+    image: {
       type: String,
     },
     video_url: {

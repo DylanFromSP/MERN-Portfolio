@@ -22,14 +22,25 @@ const getSkill = async (req, res) => {
     res.status(200).json(skill)
 }
 
+const uploadImage = async (req, res) => {
+    const { base64 } = req.body
+    
+    try {
+        const image = await Skill.create({ image: base64 })
+        res.status(200).json(image)
+    } catch (error) {
+        res.status(400).json({ error: error.message})
+    }
+}
+
 const createSkill = async (req, res) => {
-    const { title, image } = req.body
+    const { title, base64 } = req.body
 
     try {
-        const skill = await Skill.create({ title, image })
+        const skill = await Skill.create({ title, image: base64 })
         res.status(200).json(skill)
     } catch(error) {
-        res.status(400).json({ error: error.message})
+        res.status(400).json({ error: error.message })
     }
 }
 
@@ -69,17 +80,6 @@ const updateSkill = async (req, res) => {
     res.status(200).json(skill)
 }
 
-const uploadImage = async (req, res) => {
-    const { base64 } = req.body
-    
-    try {
-        const image = await Skill.create({ image: base64 })
-        res.status(200).json(image)
-    } catch (error) {
-        res.status(400).json({ error: error.message})
-    }
-}
-
 module.exports = {
     createSkill,
     getSkills,
@@ -88,25 +88,3 @@ module.exports = {
     updateSkill,
     uploadImage
 }
-
-// app.post("/uploadImage", async (req, res) => {
-//     const { base64 } = req.body
-    
-//     try {
-//         Skill.create({ image: base64 })
-
-//         res.send({Status: "Ok"})
-//     } catch (error) {
-//         res.send({Status: "Error", data: error})
-//     }
-// })
-
-// app.get("/getImages", async (req, res) => {
-//     try {
-//         await images.find({}).then(data => {
-//             res.send({Status: "Ok", data: data})
-//         })
-//     } catch (error) {
-//         res.send({Status: "Error", data: error})
-//     }
-// })

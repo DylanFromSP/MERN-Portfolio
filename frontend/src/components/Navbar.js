@@ -34,7 +34,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           offset={-100}
-          className="nav-link cursor-pointer text-lg font-medium text-gray-800 hover:text-blue-500 font-bold"
+          className="nav-link cursor-pointer text-lg font-medium text-gray-800 hover:text-[#a700d1] font-bold"
         >
           Home
         </Link>
@@ -42,8 +42,8 @@ const Navbar = () => {
           to="skills"
           smooth={true}
           duration={500}
-          offset={-40}
-          className="nav-link cursor-pointer text-lg font-medium text-gray-800 hover:text-blue-500 font-bold"
+          offset={-90}
+          className="nav-link cursor-pointer text-lg font-medium text-gray-800 hover:text-[#a700d1] font-bold"
         >
           Skills
         </Link>
@@ -51,8 +51,8 @@ const Navbar = () => {
           to="projects"
           smooth={true}
           duration={500}
-          offset={-40}
-          className="nav-link cursor-pointer text-lg font-medium text-gray-800 hover:text-blue-500 font-bold"
+          offset={-90}
+          className="nav-link cursor-pointer text-lg font-medium text-gray-800 hover:text-[#a700d1] font-bold"
         >
           Projects
         </Link>

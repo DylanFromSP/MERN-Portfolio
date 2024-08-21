@@ -12,7 +12,7 @@ const Home = () => {
       <section id="skills">
         <SkillDetails />
       </section>
-      <section id="projects" className='py-20'>
+      <section id="projects">
         <ProjectDetails />
       </section>
     </div>

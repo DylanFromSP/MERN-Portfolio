@@ -4,7 +4,8 @@ const {
     getProjects, 
     getProject,
     deleteProject,
-    updateProject
+    updateProject,
+    uploadImage
 } = require("../controllers/projectController")
 
 const router = express.Router()
@@ -18,5 +19,7 @@ router.post("/", createProject)
 router.delete("/:id", deleteProject)
 
 router.patch("/:id", updateProject)
+
+router.post("/uploadImage", uploadImage)
 
 module.exports = router

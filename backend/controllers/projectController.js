@@ -23,16 +23,16 @@ const getProject = async (req, res) => {
     res.status(200).json(project)
 }
 
-const createProject = async (req, res) => {
-    const { title, cover_image, video_url, github_url, website_url, figma_url, description } = req.body
+// const createProject = async (req, res) => {
+//     const { title, cover_image, video_url, github_url, website_url, figma_url, description } = req.body
 
-    try {
-        const project = await Project.create({ title, cover_image, video_url, github_url, website_url, figma_url, description })
-        res.status(200).json(project)
-    } catch(error) {
-        res.status(400).json({ error: error.message})
-    }
-}
+//     try {
+//         const project = await Project.create({ title, cover_image, video_url, github_url, website_url, figma_url, description })
+//         res.status(200).json(project)
+//     } catch(error) {
+//         res.status(400).json({ error: error.message})
+//     }
+// }
 
 const deleteProject = async (req, res) => {
     const { id } = req.params
@@ -70,11 +70,42 @@ const updateProject = async (req, res) => {
     res.status(200).json(project)
 }
 
+const uploadImage = async (req, res) => {
+    const { base64 } = req.body
+    
+    try {
+        const image = await Project.create({ image: base64 })
+        res.status(200).json(image)
+    } catch (error) {
+        res.status(400).json({ error: error.message})
+    }
+}
+
+const createProject = async (req, res) => {
+    const { title, base64, video_url, github_url, website_url, figma_url, description } = req.body;
+
+    try {
+        const project = await Project.create({
+            title,
+            image: base64,
+            video_url,
+            github_url,
+            website_url,
+            figma_url,
+            description
+        });
+        res.status(200).json(project);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+};
+
 module.exports = {
     createProject, 
     getProjects, 
     getProject,
     deleteProject,
-    updateProject
+    updateProject,
+    uploadImage
 }
 
