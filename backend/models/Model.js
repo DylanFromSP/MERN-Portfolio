@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const skillSchema = new Schema({
     title: {
         type: String,
+        required: true,
     },
     image: {
         type: String,
@@ -18,19 +19,21 @@ const projectSchema = new Schema({
     },
     cover_image: {
       type: String,
-      required: true,
     },
     video_url: {
       type: String,
-      required: true,
     },
     github_url: {
       type: String,
-      required: true,
+    },
+    website_url: {
+      type: String,
+    },
+    figma_url: {
+      type: String,
     },
     description: {
       type: String,
-      required: true,
     }
   }, { timestamps: true });
 

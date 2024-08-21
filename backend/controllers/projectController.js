@@ -24,10 +24,10 @@ const getProject = async (req, res) => {
 }
 
 const createProject = async (req, res) => {
-    const { title, cover_image, video_url, github_url, description } = req.body
+    const { title, cover_image, video_url, github_url, website_url, figma_url, description } = req.body
 
     try {
-        const project = await Project.create({ title, cover_image, video_url, github_url, description })
+        const project = await Project.create({ title, cover_image, video_url, github_url, website_url, figma_url, description })
         res.status(200).json(project)
     } catch(error) {
         res.status(400).json({ error: error.message})
