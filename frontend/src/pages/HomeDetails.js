@@ -16,7 +16,7 @@ const HomeDetails = () => {
           <div className="grid grid-cols-3 gap-2">
             <button
               type="button"
-              className="w-full text-white bg-[#B7DBFF] font-medium rounded-lg md:py-2 hover:drop-shadow-lg duration-300 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+              className="w-full text-white bg-[#B7DBFF] font-medium rounded-lg md:py-2 shadow-2xl hover:shadow-blue-500 duration-500"
             >
               <Link to="https://www.linkedin.com/in/dylan-davindra-64a167259/">
                 <img src={Linkedin_logo} alt="LinkedIn Logo" className="h-4 md:h-6 mx-auto" />
@@ -24,7 +24,7 @@ const HomeDetails = () => {
             </button>
             <button
               type="button"
-              className="w-full text-white bg-[#D49EFF] font-medium rounded-lg md:py-2 hover:drop-shadow-lg duration-300 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+              className="w-full text-white bg-[#D49EFF] font-medium rounded-lg md:py-2 shadow-2xl duration-500 hover:shadow-purple-500"
             >
               <Link to="https://github.com/DylanFromSP">
                 <img src={Github_logo} alt="GitHub Logo" className="h-8 md:h-10 mx-auto" />
@@ -33,10 +33,10 @@ const HomeDetails = () => {
             </button>
             <button
               type="button"
-              className="w-full text-black font-bold bg-[#FF9E9E] rounded-lg text-base md:text-xl py-2.5 md:py-2 hover:drop-shadow-lg duration-300 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]"
+              className="w-full text-white font-bold bg-gray-800 rounded-lg text-base md:text-xl py-2.5 md:py-2 shadow-2xl duration-500 hover:shadow-gray-500"
             >
               <Link to="">
-                Resume
+                CV
               </Link>
             </button>
           </div>

@@ -34,7 +34,11 @@ const projectSchema = new Schema({
     },
     description: {
       type: String,
-    }
+    },
+    skills: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Skill',
+    }],
   }, { timestamps: true });
 
   module.exports = {
