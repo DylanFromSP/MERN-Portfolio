@@ -9,7 +9,7 @@ const ProjectDetails = () => {
   useEffect(() => {
     const getProjects = async () => {
       try {
-        const response = await fetch("/api/projects/");
+        const response = await fetch("https://mern-portfolio-sjao.onrender.com/api/projects/");
         const json = await response.json();
         if (response.ok) {
           setProjects(json);
