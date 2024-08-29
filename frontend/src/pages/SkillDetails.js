@@ -7,7 +7,7 @@ const SkillDetails = () => {
   useEffect(() => {
     const getSkills = async () => {
       try {
-        const response = await fetch("/api/skills/");
+        const response = await fetch("https://mern-portfolio-sjao.onrender.com/api/skills/");
         const json = await response.json();
         if (response.ok) {
           setSkills(json);

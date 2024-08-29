@@ -12,7 +12,7 @@ const ProjectDetailPage = () => {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const response = await fetch(`/api/projects/${id}`);
+        const response = await fetch(`https://mern-portfolio-sjao.onrender.com/api/projects/${id}`);
         const json = await response.json();
         if (response.ok) {
           setProject(json);
