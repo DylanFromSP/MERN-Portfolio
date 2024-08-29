@@ -26,7 +26,7 @@ const ProjectDetails = () => {
 
   const handleViewProject = (projectId) => {
     if (projectId) {
-      navigate(`https://mern-portfolio-sjao.onrender.com/projects/${projectId}`);
+      navigate(`/projects/${projectId}`);
     } else {
       console.error('Invalid project ID:', projectId);
     }
