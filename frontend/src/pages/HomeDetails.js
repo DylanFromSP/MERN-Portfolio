@@ -12,7 +12,7 @@ const HomeDetails = () => {
           <div>R Dylan <br /> Davindra</div>
         </div>
         <div className="w-3/4 lg:w-1/4 text-xl md:text-3xl text-center text-wrap">
-          <div className="pb-6 md:py-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          <div className="pb-6 md:py-6">Passionate web developer specializing in designing and building user-friendly websites using <b>ReactJS</b></div>
           <div className="grid grid-cols-3 gap-2">
             <button
               type="button"
@@ -35,7 +35,7 @@ const HomeDetails = () => {
               type="button"
               className="w-full text-white font-bold bg-gray-800 rounded-lg text-base md:text-xl py-2.5 md:py-2 shadow-2xl duration-500 hover:shadow-gray-500"
             >
-              <Link to="">
+              <Link to="https://drive.google.com/file/d/10xthWJ3Zva__RSJWL70d-8stQi3EFrH2/view?usp=sharing">
                 CV
               </Link>
             </button>

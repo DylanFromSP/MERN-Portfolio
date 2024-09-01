@@ -53,7 +53,7 @@ const ProjectDetailPage = () => {
         )}
       </div>
       <div className="flex justify-center my-4">
-        <div className="flex flex-row flex-wrap justify-center gap-4 w-full md:w-auto">
+        <div className="flex flex-row flex-wrap justify-center gap-2 w-full md:w-auto">
         {project.github_url && (
             <Link to={project.github_url}>
               <button
@@ -74,7 +74,7 @@ const ProjectDetailPage = () => {
               >
                 <div className="flex items-center justify-center">
                   <img src={Website_logo} alt="Website Logo" className="h-8 md:h-8" />
-                  <p className="text-black font-extrabold text-xs md:text-sm mr-3">View Website</p>
+                  <p className="text-black font-extrabold text-sm md:text-sm mr-3">Website</p>
                 </div>
               </button>
             </Link>
