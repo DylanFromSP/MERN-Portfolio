@@ -53,7 +53,7 @@ const InputHome = () => {
     const uploadProject = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("/api/projects/", {
+            const response = await fetch("https://mern-portfolio-sjao.onrender.com/api/projects/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

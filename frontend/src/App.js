@@ -1,37 +1,3 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom"
-
-// //Importing Pages and Components
-// import Home from "./pages/Home";
-// import Navbar from "./components/Navbar";
-// import Input from "./pages/Input";
-// import ProjectDetailPage from "./pages/ProjectDetailsPage";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <BrowserRouter>
-//       <Navbar />
-//         <Routes>
-//           <Route
-//             path = "/"
-//             element = {<Home />}
-//           />
-//           <Route
-//             path = "/Input"
-//             element = {<Input />}
-//           />
-//           <Route 
-//             path="/projects/:id" 
-//             element={<ProjectDetailPage />}
-//           />
-//         </Routes>
-//       </BrowserRouter>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Home from "./pages/Home";
